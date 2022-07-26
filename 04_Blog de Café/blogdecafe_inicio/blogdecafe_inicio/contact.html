@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blog de Café</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- -----Section - Header -->
+        <header class="header">
+            <!-- ---Bar--- -->
+            <div class="container">
+                <div class="bar">
+                    <!-- -Logo- -->
+                    <a href="index.html" class="logo"><h1 class="logo__name no-margin text-center">Blog<span class="logo__bold">DeCafé</span></h1></a>
+                    <!-- -Navegation- -->
+                    <nav class="nav">
+                        <a href="us.html" class="nav__link text-center">Nosotros</a>
+                        <a href="courses.html" class="nav__link text-center">Cursos</a>
+                        <a href="contact.html" class="nav__link text-center">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+            <!-- ---Header text--- -->
+            <div class="header__text">
+                <h2 class="no-margin">Blog de café con consejos y cursos</h2>
+                <p class="no-margin">Aprende de los expertos con las mejores recetas y consejos</p>
+            </div>
+        </header>
+
+        <!-- -----Seaction - Main----- -->
+        <main class="container">
+            <h3 class="text-center">Contacto</h3>
+            <!-- ---Background--- -->
+            <div class="contact-bg">
+
+            </div>
+            <!-- ---Form--- -->
+            <form class="form">
+                <div class="field">
+                    <label class="field__label" for="name">Nombre:</label> <!-- El atributo "for" para que al dar clic en el label se active el input -->
+                    <input class="field__input" type="text" placeholder="Tu nombre" id="name"> <!-- El "id" para que lo reconozca por el label -->
+                </div>
+                <div class="field">
+                    <label class="field__label" for="email">E-Mail:</label>
+                    <input class="field__input" type="email" placeholder="Tu e-mail" id="email"> 
+                </div>
+                <div class="field">
+                    <label class="field__label" for="msg">Mensaje:</label>
+                    <textarea class="field__input field__input--textarea" placeholder="Tu mensaje" id="msg"></textarea>
+                </div>
+                <div class="field">
+                    <input class="button button--primary" type="submit" value="Enviar"> 
+                </div>
+            </form>
+        </main>
+
+        <!-- -----Footer----- -->
+        <footer class="footer">
+            <div class="container">
+                <div class="bar">
+                    <!-- -Logo- -->
+                    <a href="index.html" class="logo"><h1 class="logo__name no-margin text-center">Blog<span class="logo__bold">DeCafé</span></h1></a>
+                    <!-- -Navegation- -->
+                    <nav class="nav">
+                        <a href="us.html" class="nav__link text-center">Nosotros</a>
+                        <a href="courses.html" class="nav__link text-center">Cursos</a>
+                        <a href="contact.html" class="nav__link text-center">Contacto</a>
+                    </nav>
+                </div>
+            </div>
+        </footer>
+        <script src="js/modernizr.js"></script>
+    </body>
+</html>

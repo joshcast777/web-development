@@ -1,0 +1,14 @@
+/**
+ * ! script for compiling SASS in package.json
+ * ! "name_script(sass)": "name_bin(sass) --watch input_location(src/sccs):output_location(build/css)" -> --watch is for witing for changes
+ * ! To call the script execute "npm run name_script(sass)"
+ */
+
+// Old way to use SASS files, importing files - with the @import syntax, variable will be avaliable to be used for all files
+// Variables use to be first to be used for all files
+// @import "base/variables";
+// @import "content/content";
+
+// New way to use SASS, it needs a _index.scss file in every folder in SASS - @use will call the _index.scss in every folder specified - @use will compile and call files to be used in the current file
+@use "base";
+@use "layout";

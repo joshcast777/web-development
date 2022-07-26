@@ -1,0 +1,46 @@
+@use "base/variables" as var;
+
+// A mixin is like a function - param $color with default value blue
+@mixin heading($color: blue) {
+	text-transform: uppercase;
+	font-size: 2.4rem;
+	color: $color;
+	letter-spacing: 1px;
+}
+
+@mixin phone {
+	@media (min-width: var.$phone) {
+		// @content to recieve code from SASS file where is used
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: var.$tablet) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: var.$desktop) {
+		@content;
+	}
+}
+
+@mixin desktop-xl {
+	@media (min-width: var.$desktop-xl) {
+		@content;
+	}
+}
+
+@mixin grid($columns, $gap) {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+	gap: $gap;
+}
+
+@mixin resetList {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}

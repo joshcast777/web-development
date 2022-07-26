@@ -1,0 +1,94 @@
+@use "base/variables" as var;
+@use "base/mixins" as mix;
+
+.lineup {
+	background-color: var.$pink;
+	padding: 5rem 0;
+
+	h3,
+	p {
+		text-align: center;
+		color: var.$white;
+	}
+
+	.day {
+		text-transform: uppercase;
+		margin: 5rem 0;
+	}
+}
+
+.scenary {
+	padding-top: 2rem;
+
+	scenary-name {
+		&:after {
+			content: "";
+			display: block;
+			width: 20rem;
+			height: 10rem;
+			background-size: 15rem;
+			background-repeat: no-repeat;
+			background-position: center center;
+			margin: 2rem auto 0 auto;
+		}
+	}
+}
+
+
+
+.edm .scenary-name:after {
+	background-image: url(../img/icono_edm.png)
+}
+
+.rock {
+	margin-bottom: 2rem;
+
+	@include mix.tablet {
+		margin: 0;
+	}
+
+	.scenary-name:after {
+		background-image: url(../img/icono_rock.png)
+	}
+}
+
+.scenary-container {
+	@include mix.tablet {
+		@include mix.grid(2, 5rem);
+	}
+
+	p {
+		color: var.$black;
+	}
+}
+
+.calendar {
+	@include mix.resetList;
+
+	li {
+		padding: 2.5rem;
+		font-weight: 700;
+
+		span {
+			font-weight: 400;
+		}
+	}
+}
+
+.bg-yellow {
+	background-color: var.$yellow;
+
+	li:nth-child(odd) {
+		// darken is a mixins to make darkest a color darken(color, percentage)
+		background-color: darken(var.$yellow, 20%);
+	}
+}
+
+.bg-green {
+	background-color: var.$green;
+
+	li:nth-child(odd) {
+		// darken is a mixins to make darkest a color darken(color, percentage)
+		background-color: darken(var.$green, 10%);
+	}
+}

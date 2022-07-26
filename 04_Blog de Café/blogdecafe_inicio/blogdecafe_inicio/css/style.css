@@ -1,0 +1,351 @@
+/* font-family: 'Open Sans', sans-serif;
+font-family: 'PT Sans', sans-serif; */
+
+/***** ----------CUSTOM PROPERTIES---------- *****/
+
+:root {
+	--heading-font: "PT Sans", sans-serif;
+	--paragraph-font: "Open Sans", sans-serif;
+	--primary-color: #784d3c;
+	--white-color: #fff;
+	--black-color: #000;
+	--gray-color: #e1e1e1;
+}
+
+/***** ----------GLOBALS---------- *****/
+
+html {
+	box-sizing: border-box;
+	font-size: 62.2%;
+	/* Hace que 1rem = 10px */
+}
+
+body {
+	font-family: var(--paragraph-font);
+	font-size: 1.6rem;
+	line-height: 2;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+.container {
+	max-width: 120rem;
+	width: 90%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--heading-font);
+	line-height: 1.2;
+}
+
+h1 {
+	font-size: 4.8rem;
+}
+
+h2 {
+	font-size: 4rem;
+}
+
+h3 {
+	font-size: 3.2rem;
+}
+
+h4 {
+	font-size: 2.8rem;
+}
+
+img {
+	max-width: 100%;
+}
+
+/***** ----------UTILITIES---------- *****/
+.no-margin {
+	margin: 0;
+}
+
+.no-padding {
+	padding: 0;
+}
+
+.text-center {
+	text-align: center;
+}
+
+/***** ----------INDEX---------- *****/
+
+/*** -----Section - Header----- ***/
+/* ---Bar--- */
+@media (min-width: 768px) {
+	.bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+/* -Logo- */
+.logo {
+	color: var(--white-color);
+}
+
+.logo__name {
+	font-weight: normal;
+}
+
+.logo__bold {
+	font-weight: bold;
+}
+
+/* -Navegation- */
+.nav__link {
+	display: block;
+	font-size: 1.8rem;
+	color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+	.nav {
+		display: flex;
+		gap: 2rem;
+	}
+}
+
+/* ---Headet text--- */
+.webp .header {
+	background-image: url(../img/banner.webp);
+}
+
+.no-webp .header {
+	background-image: url(../img/banner.jpg);
+}
+
+.header {
+	height: 60rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.header__text {
+	text-align: center;
+	color: var(--white-color);
+}
+
+@media (min-width: 768px) {
+	.header__text {
+		margin-top: 15rem;
+	}
+}
+
+/*** -----Section - Main----- ***/
+@media (min-width: 768px) {
+	.main-content {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		column-gap: 4rem;
+	}
+}
+
+/* ---Main--- */
+.input {
+	border-bottom: 0.01px solid var(--gray-color);
+	margin-bottom: 2rem;
+}
+
+.input:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.button {
+	display: block;
+	font-family: var(--heading-font);
+	color: var(--white-color);
+	text-align: center;
+	padding: 1rem 3rem;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-bottom: 2rem;
+	border: none;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+@media (min-width: 768px) {
+	.button {
+		display: inline-block;
+	}
+}
+
+.button--primary {
+	background-color: var(--black-color);
+}
+
+/* ---Sidebar--- */
+.courses {
+	list-style: none;
+}
+
+.widget-course {
+	border-bottom: 0.01rem solid var(--gray-color);
+	margin-bottom: 2rem;
+}
+
+.widget-course:last-of-type {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.widget-course__label,
+.course__label {
+	font-family: var(--heading-font);
+	font-weight: bold;
+}
+
+.widget-course__info,
+.course__info {
+	font-weight: normal;
+}
+
+.widget-course__label,
+.widget-course__info,
+.course__label,
+.course__info {
+	font-size: 2rem;
+}
+
+.button--secundary {
+	background-color: var(--primary-color);
+}
+
+/*** ----Section - Footer---- ***/
+.footer {
+	background-color: var(--black-color);
+	padding: 3rem 0;
+	margin-top: 5rem;
+}
+
+/***** ----------US---------- *****/
+
+/*** -----Section - Main----- ***/
+@media (min-width: 768px) {
+	/* Usando flexbox */
+	.about-us {
+		display: flex;
+		/* gap: 2rem; Separación entre elementos en flexbox, forma vieja, no completamente soportado */
+		justify-content: space-between;
+	}
+
+	/* Factores de crecimiento, lo mismo que el flex-basis: por cada 1px que tenga text, img tendrá 3px */
+	.about-us__img {
+		/* flex: 1; */
+		flex: 0 0 calc(50% - 1rem);
+		/* Lo mismo que flex-basis */
+	}
+
+	.about-us__text {
+		/* flex: 1; */
+		flex: 0 0 calc(50% - 1rem);
+	}
+
+	/*.about-us__img, .about-us__text
+    {
+        flex-basis: 50%; /* Width cuando se tiene flexbox */
+	/*flex-basis: calc(50% - 1rem); /* Separación entre elementos en flexbox, forma viaje, completamete soportado */
+	/*}*/
+
+	/* Usando grid */
+	/* .about-us
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: auto;2rem
+    } */
+}
+
+/***** ----------COURSES---------- *****/
+
+/*** -----Section - Main----- ***/
+.course {
+	padding: 3rem 0;
+	border-bottom: 0.01rem solid var(--gray-color);
+}
+
+.course:last-of-type {
+	border: none;
+}
+
+@media (min-width: 768px) {
+	.course {
+		display: grid;
+		grid-template-columns: 1fr 2fr;
+		column-gap: 2rem;
+	}
+}
+
+/***** ----------BLOG---------- *****/
+
+/***** ----------CONTACT---------- *****/
+
+/*** -----Section - Main----- ***/
+/* ---Background--- */
+.contact-bg {
+	background-image: url(../img/contacto.jpg);
+	height: 40rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* ---Form--- */
+.form {
+	background-color: var(--white-color);
+	margin: -5rem auto;
+	width: 95%;
+	padding: 5rem;
+}
+
+.field__input {
+	width: 100%;
+}
+
+.field__input--textarea {
+	height: 15rem;
+}
+
+@media (min-width: 769px) {
+	.field {
+		display: flex;
+		margin-bottom: 2rem;
+		/* gap: 2rem; */
+	}
+
+	.field__label {
+		flex: 0 0 9rem;
+		/* Tamaño base, no crece, no se reduce, se queda en un solo tamaño */
+		text-align: right;
+		padding-right: 2rem;
+		/* Para más compatibilidad que el gap */
+		font-weight: bold;
+	}
+
+	.field__input {
+		flex: 1;
+		/* Si el otro no tiene factor de crecimiento, por cada 0px que recibe el otro, este recibe 1px. Tomará el resto de px */
+		border: 0.01rem solid var(--gray-color);
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <header class="header">
+            <a href="index.html">
+                <img class="header__logo" src="img/logo.png" alt="logo_store">
+            </a>
+        </header>
+        <nav class="nav">
+            <a class="nav__link nav__link--active" href="index.html">Tienda</a>
+            <a class="nav__link" href="nosotros.html">Nosotros</a>
+        </nav>
+        <main class="container">
+            <h1>React JS</h1>
+            <div class="tshirt">
+                <img class="tshirt__img" src="img/3.jpg" alt="imagen del producto">
+                <div class="tshirt__content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, ipsam rerum possimus beatae vero consectetur similique dolorem, quidem itaque quod deserunt impedit optio ipsa! Ratione fugiat consectetur eos commodi.<br>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam, ut! Excepturi eos deleniti minus explicabo amet nam expedita, quam minima deserunt qui placeat aliquid eum? Quod sequi nam cupiditate eum?
+                    </p>
+                    <form class="form">
+                        <select class="form__camp" name="" id=""><!-- Todo el combobox -->
+                            <option value="" disabled selected>Seleccionar talla...</option>
+                            <option value="">Chica</option>
+                            <option value="">Mediana</option>
+                            <option value="">Grande</option>
+                        </select>
+                        <input class="form__camp" type="number" placeholder="Cantidad" min="1">
+                        <input class="form__submit" type="submmit" value="Agregar al carrito">
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            <p class="footer__text">Front-End Store - Todos los derechos Reservados 2022</p>
+        </footer>
+    </body>
+</html>

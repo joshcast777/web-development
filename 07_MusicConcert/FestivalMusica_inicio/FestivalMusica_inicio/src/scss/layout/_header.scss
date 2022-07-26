@@ -1,0 +1,58 @@
+@use "base/variables" as var;
+@use "base/mixins" as mix;
+
+.header {
+	background-color: var.$green;
+	
+	@include mix.tablet {
+		&.pinup {
+			left: 0;
+			top: 0;
+			position: fixed;
+			width: 100%;
+			box-shadow: 0.1rem 0.2rem 0.3rem #666;
+		}
+	}
+
+	h1 {
+		color: var.$white;
+		text-align: center;
+
+		@include mix.tablet {
+			margin: 0;
+		}
+	}
+
+	.header-content {
+		padding: 2rem;
+
+		@include mix.tablet {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}
+
+.main-nav {
+	@include mix.tablet {
+		display: flex;
+		gap: 2rem;
+	}
+
+	a {
+		display: block;
+		text-align: center;
+		margin-bottom: 1rem;
+		color: var.$white;
+		font-size: 2.4rem;
+
+		&:hover {
+			color: var.$yellow;
+		}
+
+		@include mix.tablet {
+			margin: 0;
+		}
+	}
+}

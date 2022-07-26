@@ -1,0 +1,13 @@
+----- PARA VALIDACIONES EN TIEMPO REAL EN JS
+
+const input = document.querySelector("#text");
+console.log(input);
+
+input.addEventListener("input", function (evt) {
+  const letter = evt.data;
+  console.log(letter);
+  
+  if(letter !== "d") {
+    evt.target.value = evt.target.value.slice(0, -1);
+  }
+});
